@@ -10,6 +10,9 @@ app.use('/usuarios', usuarioRoutes)
 const envioRoutes = require('./routes/envios.routes')
 app.use('/envios', envioRoutes)
 
+const eliminarRoutes = require('./routes/envios.routes')
+app.use('/envios', eliminarRoutes)
+
 mongoose.connect(process.env.MONGODB_URI)
     .then(()=>{
         console.log("Conectado a MongoDB")
