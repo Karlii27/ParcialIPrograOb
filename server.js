@@ -7,6 +7,9 @@ require('dotenv').config()
 const usuarioRoutes= require('./routes/usuarios.routes')
 app.use('/usuarios', usuarioRoutes)
 
+const envioRoutes = require('./routes/envios.routes')
+app.use('/envios', envioRoutes)
+
 mongoose.connect(process.env.MONGODB_URI)
     .then(()=>{
         console.log("Conectado a MongoDB")
